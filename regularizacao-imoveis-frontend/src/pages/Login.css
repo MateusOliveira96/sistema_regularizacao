@@ -1,0 +1,97 @@
+/* Login Page Styles */
+.login-container {
+  @apply min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4;
+}
+
+.login-content {
+  @apply w-full max-w-md;
+}
+
+.login-card {
+  @apply shadow-xl border-0 bg-white backdrop-blur-sm;
+}
+
+.login-header {
+  @apply text-center space-y-4 pb-6;
+}
+
+.login-logo {
+  @apply flex justify-center;
+}
+
+.logo-icon {
+  @apply h-12 w-12 text-blue-600;
+}
+
+.login-title {
+  @apply text-xl font-bold text-gray-900;
+}
+
+.login-description {
+  @apply text-gray-600;
+}
+
+.login-form {
+  @apply space-y-4;
+}
+
+.login-error {
+  @apply mb-4;
+}
+
+.form-group {
+  @apply space-y-2;
+}
+
+.password-input {
+  @apply relative;
+}
+
+.password-toggle {
+  @apply absolute right-0 top-0 h-full px-3 hover:bg-transparent;
+}
+
+.login-button {
+  @apply w-full h-11 text-base font-medium;
+}
+
+.login-footer {
+  @apply mt-6 pt-6 border-t border-gray-200;
+}
+
+.login-help {
+  @apply text-sm text-gray-600 text-center;
+}
+
+/* Animations */
+.login-card {
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading state */
+.login-button:disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .login-container {
+    @apply p-2;
+  }
+  
+  .login-title {
+    @apply text-lg;
+  }
+}
+

@@ -1,0 +1,221 @@
+/* Dashboard Styles */
+.dashboard {
+  @apply space-y-6;
+}
+
+.dashboard-header {
+  @apply space-y-2;
+}
+
+.dashboard-title {
+  @apply text-3xl font-bold text-gray-900;
+}
+
+.dashboard-subtitle {
+  @apply text-gray-600;
+}
+
+.dashboard-loading {
+  @apply flex flex-col items-center justify-center min-h-[400px] space-y-4;
+}
+
+.dashboard-error {
+  @apply max-w-2xl;
+}
+
+/* Stats Grid */
+.stats-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+}
+
+.stat-card {
+  @apply transition-all duration-200 hover:shadow-md;
+}
+
+.stat-header {
+  @apply pb-2;
+}
+
+.stat-title {
+  @apply flex items-center gap-2 text-sm font-medium text-gray-600;
+}
+
+.stat-icon {
+  @apply h-4 w-4;
+}
+
+.stat-value {
+  @apply text-3xl font-bold text-gray-900 mb-2;
+}
+
+.stat-breakdown {
+  @apply space-y-1;
+}
+
+.stat-item {
+  @apply flex justify-between text-sm;
+}
+
+.stat-label {
+  @apply text-gray-600;
+}
+
+.stat-number {
+  @apply font-medium text-gray-900;
+}
+
+.stat-description {
+  @apply text-sm text-gray-600;
+}
+
+/* Dashboard Content */
+.dashboard-content {
+  @apply grid grid-cols-1 lg:grid-cols-2 gap-6;
+}
+
+/* Overdue Card */
+.overdue-card {
+  @apply lg:col-span-2 border-red-200 bg-red-50;
+}
+
+.overdue-title {
+  @apply flex items-center gap-2 text-red-600;
+}
+
+.overdue-list {
+  @apply space-y-3 mb-4;
+}
+
+.overdue-item {
+  @apply flex items-start justify-between p-3 bg-white rounded-md border;
+}
+
+.overdue-info {
+  @apply flex-1 space-y-1;
+}
+
+.overdue-property {
+  @apply font-medium text-gray-900;
+}
+
+.overdue-step {
+  @apply text-sm text-gray-600;
+}
+
+.overdue-days {
+  @apply text-sm font-medium text-red-600;
+}
+
+/* Activities Card */
+.activities-title {
+  @apply flex items-center gap-2;
+}
+
+.activities-list {
+  @apply space-y-3 mb-4;
+}
+
+.activity-item {
+  @apply p-3 bg-gray-50 rounded-md border;
+}
+
+.activity-info {
+  @apply space-y-1;
+}
+
+.activity-property {
+  @apply font-medium text-gray-900;
+}
+
+.activity-step {
+  @apply flex items-center gap-2 text-sm;
+}
+
+.activity-date {
+  @apply text-sm text-gray-600;
+}
+
+.activity-user {
+  @apply ml-2 font-medium;
+}
+
+.no-activities {
+  @apply text-center text-gray-600 py-8;
+}
+
+/* Quick Links Card */
+.quick-links {
+  @apply grid grid-cols-1 gap-3;
+}
+
+.quick-link {
+  @apply justify-start h-auto py-3;
+}
+
+/* Status Badge */
+.status-badge {
+  @apply text-xs;
+}
+
+/* View All Button */
+.view-all-button {
+  @apply w-full;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .dashboard-title {
+    @apply text-2xl;
+  }
+  
+  .stats-grid {
+    @apply grid-cols-1 sm:grid-cols-2;
+  }
+  
+  .dashboard-content {
+    @apply grid-cols-1;
+  }
+  
+  .overdue-card {
+    @apply lg:col-span-1;
+  }
+  
+  .overdue-item {
+    @apply flex-col items-start gap-2;
+  }
+  
+  .stat-value {
+    @apply text-2xl;
+  }
+}
+
+/* Animations */
+.stat-card {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.2s; }
+.stat-card:nth-child(3) { animation-delay: 0.3s; }
+.stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.stat-card:hover {
+  @apply scale-105;
+}
+
+.quick-link:hover {
+  @apply scale-105;
+}
+
